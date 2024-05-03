@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButtonModule} from "@angular/material/button";
 import {MatCardModule} from "@angular/material/card";
@@ -17,7 +17,8 @@ class Courses {
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatCardModule, MatTabsModule, RouterLink],
   templateUrl: './courses-card-list.component.html',
-  styleUrl: './courses-card-list.component.css'
+  styleUrl: './courses-card-list.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CoursesCardListComponent implements OnInit {
 
